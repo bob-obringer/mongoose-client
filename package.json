@@ -2,7 +2,7 @@
   "name": "@bob-obringer/mongoose-client",
   "version": "0.0.2",
   "description": "",
-  "main": "index.js",
+  "module": "dist/index.esm.js",
   "scripts": {
     "dev": "pnpm rollup:watch",
     "build": "pnpm rollup:build",
