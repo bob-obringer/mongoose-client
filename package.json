@@ -3,6 +3,10 @@
   "version": "0.0.2",
   "description": "",
   "module": "dist/index.esm.js",
+  "main": "dist/index.esm.js",
+  "files": [
+    "dist/**/*"
+  ],
   "scripts": {
     "dev": "pnpm rollup:watch",
     "build": "pnpm rollup:build",
