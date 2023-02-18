@@ -7,7 +7,7 @@ on:
         
 jobs:
   build-deploy-bump:
-    uses: bob-obringer/github-workflows/package-build-deploy-bump.yml
+    uses: bob-obringer/github-workflows/package-build-deploy-bump.yml@main
     secrets: inherit
 #
 #jobs:
