@@ -8,10 +8,8 @@
     "dist/**/*"
   ],
   "scripts": {
-    "dev": "pnpm rollup:watch",
-    "build": "pnpm rollup:build",
-    "rollup:build": "rollup -c",
-    "rollup:watch": "rollup -c -w"
+    "dev": "rollup -c -w",
+    "build": "rollup -c"
   },
   "keywords": [],
   "author": "Bob Obringer",
