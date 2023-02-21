@@ -45,7 +45,7 @@ export class MongooseClient<T extends Models> {
     return connection;
   }
   
-  private installModelsForConnection(modelConfig: { [P in keyof T]: mongoose.Schema<T[P]> }) {
+  private installModels(modelConfig: { [P in keyof T]: mongoose.Schema<T[P]> }) {
     const models = {} as ModelMap<T>;
     for (const [modelName, schema] of Object.entries(modelConfig)) {
       models[modelName as keyof T] =
@@ -54,7 +54,7 @@ export class MongooseClient<T extends Models> {
           T[keyof T]
         >);
     }
-    this.models = models;
+    return models;
   }
   
   public constructor(
@@ -62,6 +62,6 @@ export class MongooseClient<T extends Models> {
     modelConfig: { [P in keyof T]: mongoose.Schema<T[P]> }
   ) {
     this.connection = this.getOrCreateConnection(config);
-    this.installModelsForConnection(modelConfig);
+    this.models = this.installModels(modelConfig);
   }
 }
