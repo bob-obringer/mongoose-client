@@ -1,6 +1,6 @@
 {
   "name": "@bob-obringer/mongoose-client",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
