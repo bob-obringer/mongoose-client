@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-type ModelType<T extends Document> = mongoose.Model<T> & {
+type ModelType<T extends mongoose.Document> = mongoose.Model<T> & {
   // Define any additional methods or properties here
 };
 
@@ -16,7 +16,7 @@ type ModelMap<T extends Models> = {
 };
 
 interface Models {
-  [modelName: string]: Document;
+  [modelName: string]: mongoose.Document;
 }
 
 export class MongooseClient<T extends Models> {
